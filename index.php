@@ -116,7 +116,7 @@ if(isset($_GET['v'])){
           <script>$("#menu").load('<?php echo './ajax/ajax.php?type=menu'?>');</script>
     </div>
       <div class="col-md-9 ">
-         <div class="col-md-12 pb-3 d-none d-sm-none d-md-block" style="background: url(http://wx2.sinaimg.cn/large/b0738b0agy1fm4j4ba83wj20t60jh0uf.jpg) no-repeat;background-size: cover;background-position: center -80px;text-align: center;
+         <div class="col-md-12 pb-3 d-none d-sm-none d-md-block" style="background: url(https://wx2.sinaimg.cn/large/b0738b0agy1fm4j4ba83wj20t60jh0uf.jpg) no-repeat;background-size: cover;background-position: center -80px;text-align: center;
     "> 
    <h3 class="pt-5 pb-2 text-white">你好 世界！</h3>
     <form>
