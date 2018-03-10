@@ -16,7 +16,7 @@ ini_set('error_log', dirname(__FILE__) . '/error_log.txt');
     	case 'video':
             	   $videodata=get_search_video($q,APIKEY,$ptk,'video',$order,GJ_CODE);
             	   	if($videodata['pageInfo']['totalResults']<=1){
-    		    echo'<div class="alert alert-danger h4 p-3 m-2" role="alert">抱歉，没有找到与<strong>'.urldecode($q).'</strong>相关的视频。</div>';
+    		    echo'<div class="alert alert-danger h4 p-3 m-2" role="alert">Entschuldigung, nicht gefunden<strong>'.urldecode($q).'</strong>Ähnliche Videos</div>';
     		    exit;
     		}
             	   echo '<ul  class="list-unstyled  video-list-thumbs row pt-1">';
@@ -93,7 +93,7 @@ ini_set('error_log', dirname(__FILE__) . '/error_log.txt');
     	case 'channels':
     		$video=get_channel_video($_GET['channelid'],$ptk,APIKEY,GJ_CODE);
     		if($video['pageInfo']['totalResults']<=1){
-    		    echo'<p>获取内容失败！此频道用户没有上传任何内容，或者频道内容受版权保护,暂时无法查看！</p>';
+    		    echo'<p>Inhalte konnten nicht abgerufen werden! Dieser Kanalbenutzer hat keinen Inhalt hochgeladen oder der Kanalinhalt ist urheberrechtlich geschützt und kann derzeit nicht angezeigt werden!</p>';
     		    exit;
     		}
     		foreach($video['items'] as $v) {
@@ -153,20 +153,13 @@ ini_set('error_log', dirname(__FILE__) . '/error_log.txt');
         $vica=videoCategories(APIKEY,GJ_CODE);
         
         echo '<ul class="list-group text-dark">
-        <li class="list-group-item font-weight-bold"><i class="fa fa-home fa-fw pr-4"></i><a href="./" class="text-dark">首页</a></li>
-        <li class="list-group-item"><i class="fa fa-fire fa-fw pr-4"></i><a href="./content.php?cont=trending" class="text-dark">时下流行</a></li>
-        <li class="list-group-item"><i class="fa fa-history fa-fw pr-4"></i><a href="./content.php?cont=history" class="text-dark">历史记录</a></li>
+        <li class="list-group-item font-weight-bold"><i class="fa fa-home fa-fw pr-4"></i><a href="./" class="text-dark">Startseite</a></li>
+        <li class="list-group-item"><i class="fa fa-fire fa-fw pr-4"></i><a href="./content.php?cont=trending" class="text-dark">Trends</a></li>
+        <li class="list-group-item"><i class="fa fa-history fa-fw pr-4"></i><a href="./content.php?cont=history" class="text-dark">Verlauf</a></li>
         <li class="list-group-item"><i class="fa fa-gavel fa-fw pr-4"></i><a href="./content.php?cont=DMCA"class="text-dark">DMCA</a></li>
-        <li class="list-group-item"><i class="fa fa-cloud-download fa-fw pr-4"></i><a href="./content.php?cont=video" class="text-dark">视频下载</a></li>
+        <li class="list-group-item"><i class="fa fa-cloud-download fa-fw pr-4"></i><a href="./content.php?cont=video" class="text-dark">Downloader</a></li>
         <li class="list-group-item"><i class="fa fa-file-code-o fa-fw pr-4 pr-4"></i><a href="./content.php?cont=api" class="text-dark">API</a></li>
-        </ul>
-        <ul class="list-group pt-3">
-        <li class="list-group-item font-weight-bold"></i>YOUTUBE 精选</li>
         ';
-        foreach($vica['items'] as $v){
-        echo '<li class="list-group-item"><a href="./content.php?cont=category&sortid='.$v['id'].'" class="text-dark">'.$v['snippet']['title'].'</a></li>';    
-        }
-        echo '</ul>';
         break;
     
     case 'trending':
@@ -188,42 +181,41 @@ ini_set('error_log', dirname(__FILE__) . '/error_log.txt');
     
       
     case 'DMCA':
-        echo '<div class="font-weight-bold h6 pb-1">DMCA及免责声明</div>';
+        echo '<div class="font-weight-bold h6 pb-1">DMCA</div>';
         echo '<h6><b>DMCA：</b><h6>';
-        echo '<p class="h6" style="line-height: 1.7">This site video content from the Internet.<br>
-If inadvertently violate your copyright.<br>
-Send copyright complaints to '.EMAIL.'! We will response within 48 hours!<br></p>';
-echo '<h6 class="pt-3"><b>用户须知：</b><h6>';
-        echo '<p class="h6" style="line-height: 1.7">请您仔细阅读以下条款，如果您对本协议的任何条款表示异议，您可以选择不使用本网站。一旦您浏览本站，无论您是有意浏览还是无意浏览，均意味着您完全接受本协议项下的全部条款。<br>
-        1.鉴于本站以非人工检索方式、您请求的内容版权归第三方站点内容，您可能从该第本站网页上获得资讯及享用服务，但本站不对其内容合法性负责，亦不承担任何法律责任。<br>
-        2.本站所有内容来源自第三方站点，本站将以技术手段最大限度的过滤屏蔽不良违法内容，若您无意之中浏览到了这些内容请立即关闭。<br>
-        3.使用本站，用户需承诺不得以任何方式利用本站内容直接或间接从事违反中国法律以及社会公德的行为，本站有权对违反上述承诺的内容予以删除。<br>
-        4.任何个人或组织不得利用本站内容制作、上载、复制、发布、传播或者转载如下内容：反对宪法所确定的基本原则的；危害国家安全，泄露国家秘密，颠覆国家政权，破坏国家统一的；损害国家荣誉和利益的；煽动民族仇恨、民族歧视，破坏民族团结的；破坏国家宗教政策，宣扬邪教和封建迷信的；散布谣言，扰乱社会秩序，破坏社会稳定的；散布淫秽、色情、赌博、暴力、凶杀、恐怖或者教唆犯罪；侮辱或者诽谤他人，侵害他人合法权益的；含有法律、行政法规禁止的其他内容的信息。<br></p>';
-        echo '<h6 class="pt-3"><b>免责声明：</b><h6>';
-         echo '<p class="h6" style="line-height: 1.7">1.本站不能对我们索引的第三方网站内容的正确性进行保证。<br>
-         2.任何个人或组织在第三方网站发表的内容仅表明其个人的立场和观点，本站仅作为检索工具，并不代表本站的立场或观点。本站非内容的创作者，不对第三方网站内容负责，因第三方网站内容引发的一切纠纷，由该内容的创作者承担全部法律及连带责任。本站不承担任何法律及连带责任。<br>
+        echo '<p class="h6" style="line-height: 1.7">Diese Website bezieht Videoinhalte aus dem Internet.<br>
+Wenn wir versehentlich gegen Ihr Urheberrecht verstoßen.<br>
+Schicken Sie Urheberrechtsbeschwerden an '.EMAIL.'! Wir antworten innerhalb von 48 Stunden!<br></p>';
+echo '<h6 class="pt-3"><b>Benutzerhinweis:</b><h6>';
+        echo '<p class="h6" style="line-height: 1.7">Bitte lesen Sie die folgenden Bedingungen sorgfältig durch: Wenn Sie mit den Bedingungen dieser Vereinbarung nicht einverstanden sind, können Sie diese Website nicht nutzen. Wenn Sie diese Website besuchen, unabhängig davon, ob Sie im Internet surfen oder unabsichtlich surfen möchten, akzeptieren Sie alle Bedingungen dieser Vereinbarung. <br>
+        1. Die Seite stellt mithilfe eines automatischen Abrufverfahrens Inhalte aus Youtube dar. Die Seite ist für den legitimen Inhalt nicht verantwortlich und übernimmt keine gesetzliche Haftung. <br>
+        2. Alle Inhalte von Drittanbietern, filtert die Seite mit Maskentechniken, um rechtswidrige Inhalte zu verringern. Wenn Sie dennoch einen rechtswidrigen Inhalt entdecken sollten, bitten wir darum diesen bei uns zu melden. <br>
+		</p> ';
+        echo '<h6 class="pt-3"><b>Haftungsausschluss:</b><h6>';
+        echo '<p class="h6" style="line-height: 1.7">1. Diese Website kann nicht garantieren, dass der Inhalt von Websites Dritter, die von uns indexiert wurden, korrekt ist.<br>
+        2.Der Inhalt, der von einer Person oder Organisation auf einer Website eines Dritten veröffentlicht wird, stellt nur ihre persönliche Position und Sichtweise dar. Diese Seite wird nur als Suchwerkzeug verwendet und repräsentiert nicht die Position oder den Standpunkt dieser Seite. Die Betreiber dieser Seite, ausgenommen der Inhalt, sind nicht verantwortlich für den Inhalt der Websites Dritter, da die Inhalte der Websites Dritter von allen Inhalten betroffen sind. Diese Seite übernimmt keine rechtliche und gemeinschaftliche Haftung.<br>
          
          </p>';
        break;
      case 'api':
          echo '<div class="font-weight-bold h6 pb-1">API</div>';
-         echo '<p>接口地址 :</p>
-         <div class="alert table-inverse" role="alert">'.dirname('http://'.$_SERVER['SERVER_NAME'].$_SERVER["REQUEST_URI"]).'/api.php</div><p>请求方法 : GET</p><table class="table table-bordered table-active"><thead><tr><th>参数名</th><th>参数描述</th></tr> </thead><tbody><tr><td>type</td><td>请求类型(参数为info时获取视频信息，参数为downlink时获取视频下载链接)</td></tr><tr><td>v</td><td>Youtube视频ID</td></tr></tbody></table>'
+         echo '<p>Schnittstellenadresse :</p>
+         <div class="alert table-inverse" role="alert">'.dirname('http://'.$_SERVER['SERVER_NAME'].$_SERVER["REQUEST_URI"]).'/api.php</div><p>Methode anfordern : GET</p><table class="table table-bordered table-active"><thead><tr><th>Parametername</th><th>Parameterbeschreibung</th></tr> </thead><tbody><tr><td>type</td><td>Anforderungstyp (erhalten Sie Videoinformationen, wenn der Parameter "info" ist, erhalten Sie einen Video-Download-Link, wenn der Parameter "downlink" lautet)</td></tr><tr><td>v</td><td>Youtube-ID</td></tr></tbody></table>'
                ;
-         echo '<h5>获取视频信息：(视频内容、视频简介，创作者等信息)</h5>';
-         echo '<p>请求示例：'.dirname('http://'.$_SERVER['SERVER_NAME'].$_SERVER["REQUEST_URI"]).'/api.php?type=info&v=LsDwn06bwjM</p>
-               <p>返回值： JSON</p>';
+         echo '<h5>Holen Sie sich Video-Informationen: (Video-Inhalte, Video-Einführung, Schöpfer, etc.)</h5>';
+         echo '<p>Beispiel anfordern:'.dirname('http://'.$_SERVER['SERVER_NAME'].$_SERVER["REQUEST_URI"]).'/api.php?type=info&v=LsDwn06bwjM</p>
+               <p>Rückgabewert: JSON</p>';
          
-         echo '<h5>获取视频源下载链接:</h5>';
-         echo '<p>请求示例：'.dirname('http://'.$_SERVER['SERVER_NAME'].$_SERVER["REQUEST_URI"]).'/api.php?type=downlink&v=LsDwn06bwjM</p>
-               <p>返回值： JSON</p>';
+         echo '<h5>Link zum Herunterladen der Videoquelle:</h5>';
+         echo '<p>Beispiel anfordern:'.dirname('http://'.$_SERVER['SERVER_NAME'].$_SERVER["REQUEST_URI"]).'/api.php?type=downlink&v=LsDwn06bwjM</p>
+               <p>Rückgabewert: JSON</p>';
          break;
     case 'videos':
-        echo '<div class="font-weight-bold h6 pb-1">视频下载</div>';
+        echo '<div class="font-weight-bold h6 pb-1">Downloader</div>';
         echo '<form  onsubmit="return false" id="ipt">
   <div class="form-group text-center" >
-  <input name="type" value="videodownload" style="display: none;">
-      <input type="text" name="link"  placeholder="请输入Youtube视频链接" id="soinpt"  autocomplete="off" /><button type="submit" id="subu" style="width: 24%;vertical-align:middle;border: none;height: 50px;background-color: #e62117;color: #fff;font-size: 18px;display: inline-block;" ><i class="fa fa-download fa-lg pr-1"></i>下载</button>
+  <input name="type" value="Downloader" style="display: none;">
+      <input type="text" name="link"  placeholder="Bitte geben Sie den Youtube Video Link ein" id="soinpt"  autocomplete="off" /><button type="submit" id="subu" style="width: 24%;vertical-align:middle;border: none;height: 50px;background-color: #e62117;color: #fff;font-size: 18px;display: inline-block;" ><i class="fa fa-download fa-lg pr-1"></i>Herunterladen</button>
   </div>
     </form>';
     if(isset($_GET['type']) && isset($_GET['v'])){
@@ -234,7 +226,7 @@ echo '<h6 class="pt-3"><b>用户须知：</b><h6>';
         echo video_down($_GET['v'],$viddata['items']['0']['snippet']['title']);  
         echo '</div>';
     }else{
-        echo '<div id="videoslist" class="text-center"><p>提示:如果无法下载,请选择右键另存为!<p></div>'; 
+        echo '<div id="videoslist" class="text-center"><p>Tipp: Wenn Sie nichts herunterladen können, versuchen Sie mit der rechten Maustaste auf Speichern unter das Video herunterzuladen!<p></div>'; 
     }
     echo '<script>
      $("#subu").click(function() {$("#videoslist").load(\'./ajax/ajax.php\',$("#ipt").serialize());});
@@ -245,7 +237,7 @@ echo '<h6 class="pt-3"><b>用户须知：</b><h6>';
        
     case 'trendinglist':
     $home=get_trending(APIKEY,'48',$ptk,GJ_CODE);
-        echo '<div class="font-weight-bold h6 pb-1">时下流行</div> ';
+        echo '<div class="font-weight-bold h6 pb-1">Trends</div> ';
     echo'<ul class="list-unstyled video-list-thumbs row pt-1">';
     foreach($home["items"] as $v) {
     echo '<li class="col-xs-6 col-sm-6 col-md-4 col-lg-4" ><a href="./watch.php?v='. $v["id"].'" class="hhh" >
@@ -262,14 +254,14 @@ echo '<h6 class="pt-3"><b>用户须知：</b><h6>';
     echo '</ul>';
     if (array_key_exists("nextPageToken",$home) && array_key_exists("prevPageToken",$home) ) {
        
-        echo'<a class="btn btn-outline-primary m-1 w-25 pull-left" href="./content.php?cont=trending&pageToken='.$home['prevPageToken'].'" data-toggle="">上一页</a>
-              <a class="btn btn-outline-primary m-1 w-25 pull-right" href="./content.php?cont=trending&pageToken='.$home['nextPageToken'].'" data-toggle="">下一页</a>
+        echo'<a class="btn btn-outline-primary m-1 w-25 pull-left" href="./content.php?cont=trending&pageToken='.$home['prevPageToken'].'" data-toggle="">Vorherige Seite</a>
+              <a class="btn btn-outline-primary m-1 w-25 pull-right" href="./content.php?cont=trending&pageToken='.$home['nextPageToken'].'" data-toggle="">Nächste Seite</a>
             ';
     } elseif (array_key_exists("nextPageToken",$home) && !array_key_exists("prevPageToken",$home)) {
-        echo '<a class="btn btn-outline-primary m-1 btn-block" href="./content.php?cont=trending&pageToken='.$home['nextPageToken'].'" data-toggle="">下一页</a>
+        echo '<a class="btn btn-outline-primary m-1 btn-block" href="./content.php?cont=trending&pageToken='.$home['nextPageToken'].'" data-toggle="">Nächste Seite</a>
             ';
     } elseif (!array_key_exists("nextPageToken",$home) && !array_key_exists("prevPageToken",$home)) {} else {
-        echo '<a class="btn btn-outline-primary m-1 btn-block" href="./content.php?cont=trending&pageToken='.$home['prevPageToken'].'" data-toggle="">上一页</a>' ;
+        echo '<a class="btn btn-outline-primary m-1 btn-block" href="./content.php?cont=trending&pageToken='.$home['prevPageToken'].'" data-toggle="">Vorherige Seite</a>' ;
     }
     break;
     
@@ -277,10 +269,10 @@ echo '<h6 class="pt-3"><b>用户须知：</b><h6>';
     
     case 'history':
     $hisdata=Hislist($_COOKIE['history'],APIKEY);
-    echo '<div class="font-weight-bold h6 pb-1">历史记录</div> ';
-       if($hisdata['pageInfo']['totalResults'] ==0){echo '<div class="alert alert-warning" role="alert"><h4 class="alert-heading">历史记录</h4>
-  <p>抱歉！您还没有观看过任何视频！</p>
-  <p class="mb-0">本站使用cookies临时存储您的历史记录在您的浏览器上，本站不会对您的观看历史进行保存，仅记录您的最后30条浏览记录，若您清理过你的浏览器cookies，将无法恢复！</p>
+    echo '<div class="font-weight-bold h6 pb-1">Verlauf</div> ';
+       if($hisdata['pageInfo']['totalResults'] ==0){echo '<div class="alert alert-warning" role="alert"><h4 class="alert-heading">Verlauf</h4>
+  <p>Entschuldigung! Du hast noch keine Videos gesehen！</p>
+  <p class="mb-0">Diese Seite verwendet Cookies, um Ihren Verlauf vorübergehend in Ihrem Browser zu speichern.Diese Seite speichert nicht Ihren Anzeigeverlauf.Es speichert nur Ihre letzten 30 Browserverlauf.Wenn Sie Ihre Browser-Cookies bereinigen, werden Sie Kann nicht wiederhergestellt werden！</p>
 </div>';exit();}           
                 foreach($hisdata["items"] as $v) {
                 $description = strlen($v['snippet']['description']) > 250 ? substr($v['snippet']['description'],0,250)."...." : $v['snippet']['description'];
@@ -304,8 +296,8 @@ echo '<h6 class="pt-3"><b>用户须知：</b><h6>';
      break;
      
      
-    case 'videodownload': 
-        if(stripos($_GET['link'],'youtu.be') !== false || stripos($_GET['link'],'youtube.com') !== false || stripos($_GET['link'],'watch?v=') !== false  ){}else{echo '<h6>非法请求</h6>';break;exit();}
+    case 'Videodownloader': 
+        if(stripos($_GET['link'],'youtu.be') !== false || stripos($_GET['link'],'youtube.com') !== false || stripos($_GET['link'],'watch?v=') !== false  ){}else{echo '<h6>Illegale Anfrage</h6>';break;exit();}
         preg_match("/^(?:http(?:s)?:\/\/)?(?:www\.)?(?:m\.)?(?:youtu\.be\/|youtube\.com\/(?:(?:watch)?\?(?:.*&)?v(?:i)?=|(?:embed|v|vi|user)\/))([^\?&\"'>]+)/", $_GET['link'], $mats);
         $viddata=get_video_info($mats[1],APIKEY);
         echo '<h5>'.$viddata['items']['0']['snippet']['title'].'</h5>';
@@ -317,7 +309,7 @@ echo '<h6 class="pt-3"><b>用户须知：</b><h6>';
     $category=Categories($sortid,APIKEY,$ptk,$order,GJ_CODE);
     if($category['pageInfo']['totalResults']=='0'){
         echo '<div class="alert alert-danger m-2" role="alert">
-                <strong>抱歉！</strong> 因版权方限制，本类内容暂时不提供浏览!
+                <strong>Entschuldigung! </strong> Dieser Inhalt ist aufgrund von Urheberrechtseinschränkungen nicht sichtbar!
               </div>';
               exit();
     }
