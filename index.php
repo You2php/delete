@@ -4,7 +4,7 @@ if(!file_exists('./config.php')){
       exit();   
 }
 include("./lib.php");
-$headtitle='首页'.'-'.SITE_NAME;
+$headtitle='Startseite'.'-'.SITE_NAME;
 include("./header.php");
 if(isset($_GET['v'])){
     if(stripos($_GET['v'],'youtu.be')!==false || stripos($_GET['v'],'watch?v=')!==false ){
@@ -41,7 +41,7 @@ if(isset($_GET['v'])){
     <div class="swiper-container">  
         <div class="swiper-wrapper">
             <?php
-            echo '<span class="swiper-slide"><a href="./" class="text-primary">首页</a></span>';
+            echo '<span class="swiper-slide"><a href="./" class="text-primary">Startseite</a></span>';
             foreach (categorieslist('all') as $k => $val) {
                 echo '<span class="swiper-slide"><a href="./content.php?cont=category&sortid='.$k.'" class="text-dark">'.$val.'</a></span>';  
             }
@@ -118,24 +118,20 @@ if(isset($_GET['v'])){
       <div class="col-md-9 ">
          <div class="col-md-12 pb-3 d-none d-sm-none d-md-block" style="background: url(./inc/homebg.jpg) no-repeat;background-size: cover;background-position: center -80px;text-align: center;
     "> 
-   <h3 class="pt-5 pb-2 text-white">你好 世界！</h3>
+   <h3 class="pt-5 pb-2 text-white">Hallo Welt!</h3>
     <form>
   <div class="form-group" >
-      <input type="text" name="v" style="width: 50%;height: 50px;border: none;box-sizing: border-box;padding: 14px 18px;" placeholder="请输入视频ID或Youtube链接"  autocomplete="off" /><button type="submit"  style="width: 18%;border: none;height: 50px;background-color: #e62117;color: #fff;font-size: 18px;display: inline-block;" ><i class="fa fa-youtube-play fa-lg pr-1"></i>播放</button>
+      <input type="text" name="v" style="width: 50%;height: 50px;border: none;box-sizing: border-box;padding: 14px 18px;" placeholder="Suchbetreff eingeben ..."  autocomplete="off" /><button type="submit"  style="width: 18%;border: none;height: 50px;background-color: #e62117;color: #fff;font-size: 18px;display: inline-block;" ><i class="fa fa-youtube-play fa-lg pr-1"></i>Suchen</button>
   </div>
     </form>
-    <p class="text-white m-0">社会主义核心价值观:</p>
-    <p class="text-white m-0">富强、民主、文明、和谐</p>
-    <p class="text-white m-0">自由、平等、公正、法治</p>
-    <p class="text-white m-0">爱国、敬业、诚信、友善</p>
     </div>
     
     <div class="row pt-2 pb-2">
     <div class="col-8 sm-p">
-      <span class="txt2 ricon h5">时下流行</span>
+      <span class="txt2 ricon h5">Trends</span>
     </div>
     <div class="col-4 text-right sm-p">
-      <a href="./content.php?cont=trending" title="更多" target="_blank" class="icontext h6 pl-1 ">更多<i class="fa d-inline fa-lg fa-angle-double-right"></i></a>
+      <a href="./content.php?cont=trending" title="Mehr" target="_blank" class="icontext h6 pl-1 ">Mehr <i class="fa d-inline fa-lg fa-angle-double-right"></i></a>
     </div>
   </div>
          
@@ -145,7 +141,6 @@ if(isset($_GET['v'])){
             <div id="recommend" class="videocontentrow"></div>
     <script>
     $("#videocontent").load('./ajax/ajax.php?type=trending');
-    $("#recommend").load('./ajax/ajax.php?type=recommend');
     </script>
     
         </div>

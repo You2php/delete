@@ -1,46 +1,44 @@
+Entwickler-API: https://ytcdn.bid/
+Nicht über die Wand gehen, um Youtube herunterzuladen:
 
-开发者API:https://ytcdn.bid/
-不翻墙下载youtube：
+1080p / 4K-Version:
 
-1080p/4K 版本：
-
-http://down.admin5.com/php/139702.html
+Http://down.admin5.com/php/139702.html
 
 
-ps：若部分视频播放不出来，多刷新几次，一般一两分钟之后即可正常播放！！！
-在heroku上部署you2php: https://github.com/You2php/you2php-heroku
+Ps: Wenn ein Teil des Videos nicht abgespielt wird, aktualisiere es mehrmals, normalerweise wird es nach ein oder zwei Minuten normal abgespielt! ! !
+Stellen Sie you2php auf heroku bereit: https://github.com/You2php/you2php-heroku
 
 # You2PHP
 ----
-You2PHP是一个用PHP开发的Youtube流量代理脚本、通过对接谷歌api获取数据，可用来搭建Youtube视频镜像站、可实现长城之内观看Youtube。
-请访问项目主页[https://you2php.github.io//](https://you2php.github.io/)查看更详细介绍。
+You2PHP ist ein Youtube-Traffic-Proxy-Skript, das mit PHP entwickelt wurde.Mit der Google API zum Abrufen von Daten können Sie damit eine Youtube-Video-Spiegelungsstation erstellen und Youtube in der Chinesischen Mauer anzeigen.
+Bitte besuchen Sie die Projekthomepage [https://you2php.github.io//] (https://you2php.github.io/) für weitere Details.
 
-![https://you2php.github.io/img/pic/jt1.png](https://you2php.github.io/img/pic/jt1.png)
+! [https://you2php.github.io/img/pic/jt1.png] (https://you2php.github.io/img/pic/jt1.png)
 
-# 特点
-使用You2PHP的成本非常低，只需要一个支持PHP环境的虚拟海外主机，上传代码简单设置即可立即使用。无论您使用的是虚拟主机，还是VPS，上传即可使用，无需数据库！
+# Funktionen
+Die Kosten für die Verwendung von You2PHP sind sehr niedrig, es wird nur ein virtueller Übersee-Host benötigt, der die PHP-Umgebung unterstützt, und der Upload-Code wird einfach zur sofortigen Verwendung konfiguriert. Ob Sie einen virtuellen Host oder ein VPS verwenden, laden Sie es hoch und verwenden Sie es ohne eine Datenbank!
 
-You2PHP对接谷歌官方APi，实现了视频/频道搜索、视频在线播放 、频道/类别内容预览、视频下载等功能、浏览这些内容不需要您的设备上安装任何软件。
+You2PHP ist mit der offiziellen API von Google verbunden und ermöglicht die Video- / Kanalsuche, Video-Online-Wiedergabe, Inhaltsvorschau für Kanäle / Kategorien, Video-Download usw. Das Durchsuchen dieser Inhalte erfordert keine Installation von Software auf Ihrem Gerät.
 
-You2PHP采用GPL开源协议发布，你可以自由的使用和修改代码，随时随地，访问一个URL即可观看全球视频。
-请访问项目主页[https://you2php.github.io//](https://you2php.github.io/)查看更详细介绍。
-# 如何安装与使用
-请查看You2PHP文档[https://you2php.github.io/doc/](https://you2php.github.io/doc/)
+You2PHP ist unter der GPL Open Source-Vereinbarung veröffentlicht.Sie ​​können den Code frei verwenden und ändern.Sie können jederzeit und überall auf eine URL zugreifen, um globale Videos zu sehen.
+Bitte besuchen Sie die Projekthomepage [https://you2php.github.io//] (https://you2php.github.io/) für weitere Details.
+# Wie installiere und benutze ich?
+Bitte überprüfen Sie die You2PHP-Dokumentation [https://you2php.github.io/doc/](https://you2php.github.io/doc/)
 
-请在遵守当地相关法律法规的前提下使用本项目
+Bitte verwenden Sie diesen Artikel unter der Voraussetzung der Einhaltung der lokalen Gesetze und Vorschriften
 
-本人拒绝为任何商业或非法目的提供任何技术支持
+Ich lehne es ab, technische Unterstützung für kommerzielle oder illegale Zwecke zu leisten
 
-本项目仅为科研人员更方便地学习知识而创建, 请勿大范围传播
-# 程序截图
+Dieses Projekt ist nur für Forscher gedacht, um Wissen leichter zu erlernen, bitte verbreiten Sie es nicht weit.
+# Screenshot programmieren
 
-![https://you2php.github.io/img/11.png](https://you2php.github.io/img/11.png)
-![https://you2php.github.io/img/22.png](https://you2php.github.io/img/22.png)
-![https://you2php.github.io/img/33.png](https://you2php.github.io/img/33.png)
-![https://you2php.github.io/img/55.png](https://you2php.github.io/img/55.png)
-请在遵守当地相关法律法规的前提下使用本项目
+! [https://you2php.github.io/img/11.png] (https://you2php.github.io/img/11.png)
+! [https://you2php.github.io/img/22.png] (https://you2php.github.io/img/22.png)
+! [https://you2php.github.io/img/33.png] (https://you2php.github.io/img/33.png)
+! [https://you2php.github.io/img/55.png] (https://you2php.github.io/img/55.png)
+Bitte verwenden Sie diesen Artikel unter der Voraussetzung der Einhaltung der lokalen Gesetze und Vorschriften
 
-本人拒绝为任何商业或非法目的提供任何技术支持
+Ich lehne es ab, technische Unterstützung für kommerzielle oder illegale Zwecke zu leisten
 
-本项目仅为科研人员更方便地学习知识而创建, 请勿大范围传播
-
+Dieses Projekt ist nur für Forscher gedacht, um Wissen leichter zu erlernen, bitte verbreiten Sie es nicht weit.

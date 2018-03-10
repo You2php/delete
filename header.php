@@ -7,8 +7,8 @@ error_reporting( E_ALL&~E_NOTICE );
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title><?php echo $headtitle ?></title>
-<meta name="keywords" content="Youtube,Youtube镜像,Youtube直通车,Youtube镜像网站,Youtube视频代理,Youtube在线视频" />
-<meta name="description" content="Youtube镜像" />
+<meta name="keywords" content="Youtube" />
+<meta name="description" content="Youtube" />
 
 <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport" />
 <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" >
@@ -34,7 +34,7 @@ error_reporting( E_ALL&~E_NOTICE );
 		     <form action="search.php" style="margin-bottom:0px">
 			<div class="input-group col-md-12">
 			   
-				<input type="text" name="q"  class="search-query form-control" id="youtube" placeholder="搜索 Youtube"><span class="input-group-btn"><button class="btn btn-danger" type="submit" style="z-index:4"><span class="fa d-inline fa-search"></span></button></span>
+				<input type="text" name="q"  class="search-query form-control" id="youtube" placeholder="Suchen ..."><span class="input-group-btn"><button class="btn btn-danger" type="submit" style="z-index:4"><span class="fa d-inline fa-search"></span></button></span>
 				</div>
 			</form>
 		<script >

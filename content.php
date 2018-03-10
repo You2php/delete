@@ -6,22 +6,22 @@ $sortid = $_GET['sortid'];
 $order  = isset($_GET['order']) ? $_GET['order'] : 'relevance';
 switch ($cont) {
 case 'history':
-    $headtitle='历史记录-油桶';
+    $headtitle='Verlauf ';
 	break;
 case 'category':
     $headtitle=categorieslist($sortid).'-'.SITE_NAME;
 	break;
 case 'trending':
-    $headtitle='时下流行'.'-'.SITE_NAME;
+    $headtitle='Trends '.'-'.SITE_NAME;
 	break;
 case 'DMCA':
-    $headtitle='DMCA'.'-'.SITE_NAME;
+    $headtitle='DMCA '.'-'.SITE_NAME;
 	break;
 case 'video':
-    $headtitle='视频下载工具'.'-'.SITE_NAME;
+    $headtitle='Downloader '.'-'.SITE_NAME;
 	break;
 case 'api':
-    $headtitle='API油桶'.'-'.SITE_NAME;
+    $headtitle='API '.'-'.SITE_NAME;
 	break;
 
 }
@@ -110,9 +110,9 @@ if($cont=="trending"){
             		  
             		if(isset($_GET['sortid'])){echo '<div class="font-weight-bold h6 pb-1">'.categorieslist($sortid).'</div> ';}
             		echo '<div class="row"> <div class="col-md-12 selectalign pb-3"><select class="custom-select" id="paixu">';
-            		echo '<option '. $relevance .' data-url="./ajax/ajax.php?type=category&sortid='.$sortid.'&ptk='.$ptk.'">热门视频</option>';
-            		echo '<option ' . $date1 .' data-url="./ajax/ajax.php?type=category&sortid='.$sortid.'&order=date&ptk='.$ptk.'">最新发布</option>';
-            		echo '<option ' . $viewCount .' data-url="./ajax/ajax.php?type=category&sortid='.$sortid.'&order=viewCount&ptk='.$ptk.'">最多点击</option>';
+            		echo '<option '. $relevance .' data-url="./ajax/ajax.php?type=category&sortid='.$sortid.'&ptk='.$ptk.'">Beliebte Videos</option>';
+            		echo '<option ' . $date1 .' data-url="./ajax/ajax.php?type=category&sortid='.$sortid.'&order=date&ptk='.$ptk.'">Neueste Version</option>';
+            		echo '<option ' . $viewCount .' data-url="./ajax/ajax.php?type=category&sortid='.$sortid.'&order=viewCount&ptk='.$ptk.'">Die meisten Klicks</option>';
             		echo '</select></div></div>';
             		echo '<div id="videocont"></div><script>$("#videocont").load(\'./ajax/ajax.php?type=category&sortid='. $sortid .'&order='.$order.'&ptk='.$ptk.'\');$(\'#paixu\').on(\'change\', function() {loadPage($(this).find(\':selected\').data(\'url\'));});function loadPage(url) {$("#videocont").load(url);}</script>';
             		        break;

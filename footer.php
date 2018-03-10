@@ -4,7 +4,7 @@
         </p>
         <p  class="text-white  m-1 p-1 h6">
             Powered by <a href="https://you2php.github.io/" target="_blank" class="text-white font-italic">YOU2PHP</a> 
-            <a href="./embed/upgrade.php" target="_blank" class="text-white ml-2">检查更新</a>
+            <a href="./embed/upgrade.php" target="_blank" class="text-white ml-2">Nach Updates suchen</a>
         </p>
     </footer>
   
