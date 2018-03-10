@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-        <title>检查更新</title>
+        <title>Nach Updates suchen</title>
     </head>
     <body>
         <?php
@@ -19,13 +19,13 @@
         $up=json_decode($f,true);
         if ( (int)$up['time'] > (int)$Posttime ) {
             
-            echo '本程序已经有最新版本，请升级！</br>';
-           echo '当前版本：v'.$version.'</br>';
-           echo '最新版本：v'.$up['version'].'</br>';
-           echo '请从本地址下载最新版：<a href="'.$up['links'].'" target="_blank">'.$up['links'].'</a></br>';
-           echo '更新内容：'.$up['des'];
+            echo 'Dieses Programm hat eine neue Version, bitte upgraden!</br>';
+           echo 'Aktuelle Version：v'.$version.'</br>';
+           echo 'Die neueste Version：v'.$up['version'].'</br>';
+           echo 'Bitte laden Sie die neueste Version von dieser Adresse herunter：<a href="'.$up['links'].'" target="_blank">'.$up['links'].'</a></br>';
+           echo 'Inhalt aktualisieren：'.$up['des'];
         } else{
-          echo '本程序已经是最新版，无需升级！'; 
+          echo 'Dieses Programm ist bereits die neueste Version, kein Upgrade erforderlich！'; 
         }
         ?>    
 </body>
