@@ -6,7 +6,7 @@ Die Kosten für die Verwendung von You2PHP sind sehr niedrig, es wird nur ein vi
 
 ## Wie installiere und benutze ich?
 1. Einfach alle Dateien,in einem neuen Ordner, auf den Webspace laden.
-2. Youtube API V3 beantragen [https://console.developers.google.com/apis/library/youtube.googleapis.com](YOUTUBE API)
+2. Youtube API V3 beantragen [YOUTUBE API](https://console.developers.google.com/apis/library/youtube.googleapis.com)
 3. Die API in die config.php eintragen und einen Seitentitel, Seitenname und Passwort festlegen.
 4. Fertig!
 
@@ -23,7 +23,7 @@ The cost of using You2PHP is very low, all you need is a virtual overseas host t
 
 ## How do I install and use?
 1. simply load all files, in a new folder, onto the webspace.
-2. request Youtube API V3[https://console.developers.google.com/apis/library/youtube.googleapis.com](YOUTUBE API)
+2. request Youtube API V3 [YOUTUBE API](https://console.developers.google.com/apis/library/youtube.googleapis.com)
 Enter the API in the config. php and specify a page title, page name and password.
 Four. Ready!
 
