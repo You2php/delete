@@ -2,7 +2,7 @@
 You2PHP ist ein Youtube-Traffic-Proxy-Skript, das mit PHP entwickelt wurde. Mit der Google API können Sie damit ein Abbild von Youtube erstellen. Sie haben damit die Möglichkeit Netzwerksperren zu übergehen, damit Youtube von überall abrufen.
 
 ## Voraussetzungen
-Die Kosten für die Verwendung von You2PHP sind sehr niedrig, es wird nur ein virtueller Übersee-Host benötigt, der die PHP-Umgebung unterstützt, und der Upload-Code wird einfach zur sofortigen Verwendung konfiguriert. Ob Sie einen virtuellen Host oder ein VPS verwenden, laden Sie es hoch und verwenden Sie es ohne eine Datenbank!
+Die Voraussetzungen für die Verwendung von You2PHP sind sehr niedrig, es wird nur ein virtueller Übersee-Host benötigt, der die PHP-Umgebung unterstützt, und der Upload-Code wird einfach zur sofortigen Verwendung konfiguriert. Ob Sie einen virtuellen Host oder ein VPS verwenden, laden Sie es hoch und verwenden Sie es ohne eine Datenbank!
 
 ## Wie installiere und benutze ich?
 1. Einfach alle Dateien, in einen neuen Ordner, auf den Webspace laden.
@@ -19,7 +19,7 @@ You2PHP ist unter der GPL Open Source-Vereinbarung veröffentlicht. Sie können 
 You2PHP is a Youtube traffic proxy script developed with PHP. With the Google API you can create an image of Youtube. This allows you to bypass network locks so that you can get Youtube from anywhere.
 
 ## Requirements
-The cost of using You2PHP is very low, all you need is a virtual overseas host that supports the PHP environment, and the upload code is easily configured for instant use. Whether you are using a virtual host or a VPS, upload it and use it without a database!
+The requirements of  You2PHP are very low, all you need is a virtual overseas host that supports the PHP environment, and the upload code is easily configured for instant use. Whether you are using a virtual host or a VPS, upload it and use it without a database!
 
 ## How do I install and use?
 1. Simply load all files, in a new folder, onto the webspace.
