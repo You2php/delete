@@ -22,10 +22,10 @@ You2PHP is a Youtube traffic proxy script developed with PHP. With the Google AP
 The prerequisites for using You2PHP are very low, only a virtual overseas host is required that supports the PHP environment, and the upload code is simply configured for immediate use. Whether you are using a virtual host or a VPS, upload it and use it without a database!
 
 ## How do I install and use?
-Simply load all files into a new folder on the webspace.
-2. request Youtube API V3[YOUTUBE API](https://console.developers.google.com/apis/library/youtube.googleapis.com)
-Enter the API in the config. php and specify a page title, page name and password.
-Four. Ready!
+1. Simply load all files into a new folder on the webspace.
+2. request Youtube API V3 [YOUTUBE API](https://console.developers.google.com/apis/library/youtube.googleapis.com)
+3. Enter the API in the config. php and specify a page title, page name and password.
+4. Ready!
 
 ## License
 You2PHP is released under the GPL Open Source agreement. You can freely use and change the code.
