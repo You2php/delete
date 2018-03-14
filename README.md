@@ -1,4 +1,4 @@
-# You2PHP (DEUTSCHESPRACHIGE-VERSION)
+# You2PHP (DEUTSCHSPRACHIGE-VERSION)
 You2PHP ist ein Youtube-Traffic-Proxy-Skript, das mit PHP entwickelt wurde. Mit der Google API können Sie ein Abbild von Youtube erstellen und haben damit die Möglichkeit Netzwerksperren zu umgehen, sodass Sie Youtube von schauen können.
 
 ## Voraussetzungen
