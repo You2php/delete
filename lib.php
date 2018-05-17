@@ -188,7 +188,7 @@ return $data = QueryList::Query(get_data($channel),$rules)->data;
 
 //采集抓取随机推荐内容
 function random_recommend(){
-   $dat=get_data('https://www.youtube.com/?gl='.constant("GJ_CODE").'&hl=zh-CN'); 
+   $dat=get_data('https://www.youtube.com/?gl=TW&hl=zh-CN'); 
    $rules = array(
     't' => array('#feed .individual-feed .section-list li .item-section li .feed-item-container .feed-item-dismissable .shelf-title-table .shelf-title-row h2 .branded-page-module-title-text','text'),
     'html' => array('#feed .individual-feed .section-list li .item-section li .feed-item-container .feed-item-dismissable .compact-shelf .yt-viewport .yt-uix-shelfslider-list','html'),
