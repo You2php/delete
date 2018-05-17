@@ -150,7 +150,7 @@ ini_set('error_log', dirname(__FILE__) . '/error_log.txt');
      }	
     		break;
     case 'menu':
-        $vica=videoCategories();
+        $vica=videoCategories(APIKEY,GJ_CODE);
         
         echo '<ul class="list-group text-dark">
         <li class="list-group-item font-weight-bold"><i class="fa fa-home fa-fw pr-4"></i><a href="./" class="text-dark">首页</a></li>
