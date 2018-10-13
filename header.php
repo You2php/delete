@@ -7,8 +7,16 @@ error_reporting( E_ALL&~E_NOTICE );
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title><?php echo $headtitle ?></title>
+
+<!-- 这种站点还需要搞 SEO 吗 ?
 <meta name="keywords" content="Youtube,Youtube镜像,Youtube直通车,Youtube镜像网站,Youtube视频代理,Youtube在线视频" />
 <meta name="description" content="Youtube镜像" />
+当然不行 ! -->
+
+<!-- 禁止搜索引擎抓取，快照 -->
+<meta name="robots" content="noarchive,noindex,nofollow">
+<meta name="Baiduspider" content="noarchive">
+<meta name="googlebot" content="noarchive">
 
 <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport" />
 <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" >
